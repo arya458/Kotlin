@@ -154,4 +154,31 @@ window.addEventListener('scroll', () => {
     const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = (window.pageYOffset / windowHeight) * 100;
     progressBar.style.width = `${scrolled}%`;
+});
+
+// Learning Path Navigation
+let currentStep = 0;
+const totalSteps = 5;
+
+function showStep(step) {
+    currentStep = step;
+    updateProgress();
+    scrollToStep(step);
+}
+
+function updateProgress() {
+    const progress = (currentStep / totalSteps) * 100;
+    document.querySelector('.path-progress .progress-bar').style.width = `${progress}%`;
+}
+
+function scrollToStep(step) {
+    const stepElement = document.querySelector(`.path-step:nth-child(${step})`);
+    if (stepElement) {
+        stepElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+// Initialize progress bar
+document.addEventListener('DOMContentLoaded', () => {
+    updateProgress();
 }); 

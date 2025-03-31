@@ -18,15 +18,10 @@
             <div class="logo">LearnKotlin</div>
             <ul>
                 <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#learning-path">Learning Path</a></li>
                 <li><a href="#setup">Setup</a></li>
-                <li><a href="#basics">Basics</a></li>
-                <li><a href="#variables">Variables</a></li>
-                <li><a href="#functions">Functions</a></li>
-                <li><a href="#control-flow">Control Flow</a></li>
-                <li><a href="#classes">Classes</a></li>
-                <li><a href="#null-safety">Null Safety</a></li>
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#coroutines">Coroutines</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#resources">Resources</a></li>
             </ul>
         </nav>
     </header>
@@ -55,6 +50,75 @@ fun main() {
             </div>
         </section>
 
+        <section id="learning-path" class="content-section">
+            <h2>Step-by-Step Learning Path</h2>
+            <p>Follow this structured path to learn Kotlin from scratch:</p>
+            
+            <div class="learning-path">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <h3>Getting Started</h3>
+                    <ul class="feature-list">
+                        <li>What is Kotlin?</li>
+                        <li>Why learn Kotlin?</li>
+                        <li>Setting up your development environment</li>
+                        <li>Creating your first program</li>
+                    </ul>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <h3>Basic Concepts</h3>
+                    <ul class="feature-list">
+                        <li>Variables and data types</li>
+                        <li>Basic operators</li>
+                        <li>Control flow (if, when, loops)</li>
+                        <li>Functions</li>
+                    </ul>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <h3>Object-Oriented Programming</h3>
+                    <ul class="feature-list">
+                        <li>Classes and objects</li>
+                        <li>Inheritance and interfaces</li>
+                        <li>Data classes</li>
+                        <li>Object declarations</li>
+                    </ul>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <h3>Advanced Features</h3>
+                    <ul class="feature-list">
+                        <li>Null safety</li>
+                        <li>Collections</li>
+                        <li>Coroutines</li>
+                        <li>Extensions</li>
+                    </ul>
+                </div>
+
+                <div class="path-step">
+                    <div class="step-number">5</div>
+                    <h3>Android Development</h3>
+                    <ul class="feature-list">
+                        <li>Android Studio setup</li>
+                        <li>Basic Android concepts</li>
+                        <li>Creating your first app</li>
+                        <li>Common Android patterns</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="path-navigation">
+                <button class="path-nav-btn" onclick="showStep(1)">Start Learning</button>
+                <div class="path-progress">
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+        </section>
+
         <section id="setup" class="content-section">
             <h2>Setting Up Kotlin</h2>
             <p>To get started with Kotlin, you'll need:</p>
@@ -66,6 +130,107 @@ fun main() {
             <div class="code-example">
                 <pre><code class="language-kotlin">// Create a new Kotlin project in IntelliJ IDEA
 // File -> New -> Project -> Kotlin/JVM</code></pre>
+            </div>
+        </section>
+
+        <section id="project-creation" class="content-section">
+            <h2>Creating a New Project in IntelliJ IDEA</h2>
+            <p>Follow these steps to create a new Kotlin project:</p>
+            <ol class="setup-list">
+                <li>Open IntelliJ IDEA</li>
+                <li>Click on "File" → "New" → "Project"</li>
+                <li>Select "Kotlin/JVM" from the left sidebar</li>
+                <li>Configure your project:
+                    <ul class="feature-list">
+                        <li>Project name: Your project name</li>
+                        <li>Project location: Choose your directory</li>
+                        <li>Language: Kotlin</li>
+                        <li>Build system: Gradle (recommended)</li>
+                        <li>JDK: Select your installed JDK</li>
+                    </ul>
+                </li>
+                <li>Click "Create"</li>
+            </ol>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Your project structure will look like this:
+src/
+  main/
+    kotlin/
+      Main.kt
+build.gradle.kts
+settings.gradle.kts
+
+// Main.kt content
+fun main() {
+    println("Hello, Kotlin!")
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="android-packages" class="content-section">
+            <h2>Understanding Android Packages</h2>
+            <p>Android packages are essential for organizing your code:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Package declaration
+package com.example.myapp
+
+// Import Android packages
+import android.os.Bundle
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+
+// MainActivity class
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}</code></pre>
+            </div>
+            <h3>Common Android Packages</h3>
+            <ul class="feature-list">
+                <li><code>android.os</code> - Core Android OS functionality</li>
+                <li><code>android.widget</code> - UI components</li>
+                <li><code>androidx.appcompat</code> - App compatibility library</li>
+                <li><code>androidx.core</code> - Core Android extensions</li>
+                <li><code>androidx.lifecycle</code> - Lifecycle components</li>
+                <li><code>androidx.room</code> - Database components</li>
+                <li><code>androidx.navigation</code> - Navigation components</li>
+            </ul>
+        </section>
+
+        <section id="coroutines" class="content-section">
+            <h2>Coroutines</h2>
+            <p>Kotlin coroutines for asynchronous programming:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">import kotlinx.coroutines.*
+
+// Basic coroutine
+fun main() = runBlocking {
+    launch {
+        delay(1000)
+        println("World!")
+    }
+    println("Hello")
+}
+
+// Async/await
+suspend fun fetchData(): String {
+    delay(1000)
+    return "Data"
+}
+
+// Coroutine scope
+class MyViewModel {
+    private val viewModelScope = CoroutineScope(Dispatchers.Main)
+    
+    fun loadData() {
+        viewModelScope.launch {
+            val result = async { fetchData() }.await()
+            // Handle result
+        }
+    }
+}</code></pre>
             </div>
         </section>
 
@@ -248,38 +413,159 @@ val evenNumbers = numbers.filter { it % 2 == 0 }</code></pre>
             </div>
         </section>
 
-        <section id="coroutines" class="content-section">
-            <h2>Coroutines</h2>
-            <p>Kotlin coroutines for asynchronous programming:</p>
+        <section id="examples" class="content-section">
+            <h2>Example Projects</h2>
+            
+            <h3>1. Simple Calculator App</h3>
             <div class="code-example">
-                <pre><code class="language-kotlin">import kotlinx.coroutines.*
-
-// Basic coroutine
-fun main() = runBlocking {
-    launch {
-        delay(1000)
-        println("World!")
-    }
-    println("Hello")
+                <pre><code class="language-kotlin">class Calculator {
+    fun add(a: Int, b: Int) = a + b
+    fun subtract(a: Int, b: Int) = a - b
+    fun multiply(a: Int, b: Int) = a * b
+    fun divide(a: Int, b: Int) = a / b
 }
 
-// Async/await
-suspend fun fetchData(): String {
-    delay(1000)
-    return "Data"
-}
+fun main() {
+    val calc = Calculator()
+    println(calc.add(5, 3))      // Output: 8
+    println(calc.subtract(10, 4)) // Output: 6
+}</code></pre>
+            </div>
 
-// Coroutine scope
-class MyViewModel {
-    private val viewModelScope = CoroutineScope(Dispatchers.Main)
+            <h3>2. Todo List App</h3>
+            <div class="code-example">
+                <pre><code class="language-kotlin">data class Todo(
+    val id: Int,
+    var title: String,
+    var completed: Boolean = false
+)
+
+class TodoList {
+    private val todos = mutableListOf<Todo>()
     
-    fun loadData() {
+    fun addTodo(title: String) {
+        todos.add(Todo(todos.size + 1, title))
+    }
+    
+    fun completeTodo(id: Int) {
+        todos.find { it.id == id }?.completed = true
+    }
+    
+    fun getTodos() = todos.toList()
+}
+
+fun main() {
+    val todoList = TodoList()
+    todoList.addTodo("Learn Kotlin")
+    todoList.addTodo("Build Android App")
+    todoList.completeTodo(1)
+    println(todoList.getTodos())
+}</code></pre>
+            </div>
+
+            <h3>3. Weather App (Android)</h3>
+            <div class="code-example">
+                <pre><code class="language-kotlin">data class Weather(
+    val temperature: Double,
+    val description: String,
+    val humidity: Int
+)
+
+class WeatherViewModel : ViewModel() {
+    private val _weather = MutableLiveData<Weather>()
+    val weather: LiveData<Weather> = _weather
+    
+    fun fetchWeather(city: String) {
         viewModelScope.launch {
-            val result = async { fetchData() }.await()
-            // Handle result
+            try {
+                val result = weatherRepository.getWeather(city)
+                _weather.value = result
+            } catch (e: Exception) {
+                // Handle error
+            }
+        }
+    }
+}
+
+class WeatherActivity : AppCompatActivity() {
+    private val viewModel: WeatherViewModel by viewModels()
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_weather)
+        
+        viewModel.weather.observe(this) { weather ->
+            // Update UI
         }
     }
 }</code></pre>
+            </div>
+        </section>
+
+        <section id="resources" class="content-section">
+            <h2>Additional Resources</h2>
+            <p>Here are some valuable resources to help you learn more about Kotlin:</p>
+
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Official Documentation</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://kotlinlang.org/docs/home.html" target="_blank">Kotlin Official Documentation</a></li>
+                        <li><a href="https://kotlinlang.org/docs/android.html" target="_blank">Kotlin for Android</a></li>
+                        <li><a href="https://kotlinlang.org/docs/kotlin-docs.html" target="_blank">Kotlin API Documentation</a></li>
+                        <li><a href="https://kotlinlang.org/docs/books.html" target="_blank">Kotlin Books</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Learning Platforms</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://www.jetbrains.com/academy/" target="_blank">JetBrains Academy</a></li>
+                        <li><a href="https://www.udacity.com/course/kotlin-bootcamp-for-programmers--ud9011" target="_blank">Udacity Kotlin Bootcamp</a></li>
+                        <li><a href="https://www.coursera.org/learn/kotlin-for-java-developers" target="_blank">Coursera - Kotlin for Java Developers</a></li>
+                        <li><a href="https://www.pluralsight.com/paths/kotlin" target="_blank">Pluralsight Kotlin Path</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Development Tools</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDEA</a></li>
+                        <li><a href="https://developer.android.com/studio" target="_blank">Android Studio</a></li>
+                        <li><a href="https://kotlinlang.org/docs/command-line.html" target="_blank">Kotlin Command Line Tools</a></li>
+                        <li><a href="https://kotlinlang.org/docs/gradle.html" target="_blank">Gradle Build System</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Community & Support</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://discuss.kotlinlang.org/" target="_blank">Kotlin Forums</a></li>
+                        <li><a href="https://stackoverflow.com/questions/tagged/kotlin" target="_blank">Stack Overflow - Kotlin</a></li>
+                        <li><a href="https://kotlinlang.slack.com/" target="_blank">Kotlin Slack Channel</a></li>
+                        <li><a href="https://github.com/JetBrains/kotlin" target="_blank">Kotlin GitHub Repository</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>Practice & Projects</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://exercism.org/tracks/kotlin" target="_blank">Exercism Kotlin Track</a></li>
+                        <li><a href="https://www.codewars.com/kata/search/kotlin" target="_blank">CodeWars Kotlin Challenges</a></li>
+                        <li><a href="https://github.com/topics/kotlin" target="_blank">GitHub Kotlin Projects</a></li>
+                        <li><a href="https://kotlinlang.org/docs/samples.html" target="_blank">Kotlin Sample Projects</a></li>
+                    </ul>
+                </div>
+
+                <div class="resource-card">
+                    <h3>News & Updates</h3>
+                    <ul class="resource-list">
+                        <li><a href="https://blog.jetbrains.com/kotlin/" target="_blank">Kotlin Blog</a></li>
+                        <li><a href="https://kotlinweekly.com/" target="_blank">Kotlin Weekly Newsletter</a></li>
+                        <li><a href="https://www.youtube.com/playlist?list=PLQ176FUIyIUZRmw8rZbH0JQPOOryZDV5Z" target="_blank">Kotlin YouTube Channel</a></li>
+                        <li><a href="https://twitter.com/kotlin" target="_blank">Kotlin Twitter</a></li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
