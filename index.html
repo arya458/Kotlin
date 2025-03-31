@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete Kotlin programming language tutorial for beginners with interactive examples">
+    <meta name="keywords" content="Kotlin, programming, tutorial, learn coding, Android development, Java, JVM, JetBrains, Android Studio, IntelliJ IDEA, mobile development, backend development, server-side Kotlin, coroutines, null safety, data classes, extension functions, lambda expressions, high-order functions, object-oriented programming, functional programming, Android apps, Kotlin Android, Kotlin for beginners, Kotlin basics, Kotlin syntax, Kotlin variables, Kotlin functions, Kotlin classes, Kotlin objects, Kotlin inheritance, Kotlin interfaces, Kotlin collections, Kotlin lists, Kotlin maps, Kotlin sets, Kotlin arrays, Kotlin strings, Kotlin numbers, Kotlin operators, Kotlin control flow, Kotlin loops, Kotlin when expression, Kotlin try-catch, Kotlin exceptions, Kotlin generics, Kotlin type system, Kotlin null handling, Kotlin scope functions, Kotlin delegates, Kotlin annotations, Kotlin reflection, Kotlin testing, Kotlin Spring Boot, Kotlin web development, Kotlin desktop apps, Kotlin multiplatform">
+    <title>Learn Kotlin - Complete Beginner's Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-kotlin.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LearnKotlin</div>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#setup">Setup</a></li>
+                <li><a href="#basics">Basics</a></li>
+                <li><a href="#variables">Variables</a></li>
+                <li><a href="#functions">Functions</a></li>
+                <li><a href="#control-flow">Control Flow</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#null-safety">Null Safety</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#coroutines">Coroutines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Learn Kotlin Programming</h1>
+            <p class="subtitle">A modern, concise, and safe programming language</p>
+            <div class="author">Created by Aria Danesh</div>
+        </section>
+
+        <section id="introduction" class="content-section">
+            <h2>Introduction to Kotlin</h2>
+            <p>Kotlin is a modern programming language developed by JetBrains that runs on the JVM. It's designed to be:</p>
+            <ul class="feature-list">
+                <li>Concise and safe</li>
+                <li>Interoperable with Java</li>
+                <li>Tool-friendly</li>
+                <li>Modern and pragmatic</li>
+            </ul>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Kotlin is modern and concise
+fun main() {
+    println("Hello, Kotlin!")
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="setup" class="content-section">
+            <h2>Setting Up Kotlin</h2>
+            <p>To get started with Kotlin, you'll need:</p>
+            <ol class="setup-list">
+                <li>JDK (Java Development Kit) 8 or later</li>
+                <li>IntelliJ IDEA (recommended) or Android Studio</li>
+                <li>Kotlin plugin (usually pre-installed)</li>
+            </ol>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Create a new Kotlin project in IntelliJ IDEA
+// File -> New -> Project -> Kotlin/JVM</code></pre>
+            </div>
+        </section>
+
+        <section id="basics" class="content-section">
+            <h2>Basic Syntax</h2>
+            <p>Kotlin's syntax is clean and modern:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Package declaration
+package com.example
+
+// Import statements
+import java.util.*
+
+// Main function
+fun main() {
+    println("Hello, Kotlin!")
+    
+    // Comments
+    // Single line comment
+    /* Multi-line
+       comment */
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="variables" class="content-section">
+            <h2>Variables and Data Types</h2>
+            <p>Kotlin has two types of variables:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Mutable variable (var)
+var mutableVar = "Can be changed"
+
+// Immutable variable (val)
+val immutableVar = "Cannot be changed"
+
+// Type inference
+val number = 42 // Int
+val text = "Hello" // String
+val decimal = 3.14 // Double
+val isTrue = true // Boolean
+
+// Explicit type declaration
+val explicitInt: Int = 42
+val explicitString: String = "Hello"</code></pre>
+            </div>
+        </section>
+
+        <section id="functions" class="content-section">
+            <h2>Functions</h2>
+            <p>Functions in Kotlin are declared using the 'fun' keyword:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Basic function
+fun greet(name: String): String {
+    return "Hello, $name!"
+}
+
+// Single-expression function
+fun add(a: Int, b: Int) = a + b
+
+// Function with default parameters
+fun greet(name: String, greeting: String = "Hello") {
+    println("$greeting, $name!")
+}
+
+// Function with named parameters
+fun createUser(
+    name: String,
+    age: Int,
+    email: String
+) {
+    // Function body
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="control-flow" class="content-section">
+            <h2>Control Flow</h2>
+            <p>Kotlin provides various control flow structures:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// If expression
+val max = if (a > b) a else b
+
+// When expression (similar to switch)
+when (x) {
+    1 -> print("x is 1")
+    2 -> print("x is 2")
+    else -> print("x is neither 1 nor 2")
+}
+
+// For loop
+for (i in 1..5) {
+    println(i)
+}
+
+// While loop
+while (condition) {
+    // Loop body
+}
+
+// Do-while loop
+do {
+    // Loop body
+} while (condition)</code></pre>
+            </div>
+        </section>
+
+        <section id="classes" class="content-section">
+            <h2>Classes and Objects</h2>
+            <p>Kotlin's class system is powerful and concise:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Simple class
+class Person(
+    val name: String,
+    var age: Int
+)
+
+// Class with methods
+class Calculator {
+    fun add(a: Int, b: Int) = a + b
+    fun subtract(a: Int, b: Int) = a - b
+}
+
+// Data class
+data class User(
+    val id: Int,
+    val name: String,
+    val email: String
+)
+
+// Object (Singleton)
+object Database {
+    fun connect() {
+        // Connection logic
+    }
+}</code></pre>
+            </div>
+        </section>
+
+        <section id="null-safety" class="content-section">
+            <h2>Null Safety</h2>
+            <p>Kotlin's null safety features help prevent NullPointerException:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// Non-nullable type
+var nonNullString: String = "Hello" // Cannot be null
+
+// Nullable type
+var nullableString: String? = null // Can be null
+
+// Safe call operator
+val length = nullableString?.length
+
+// Elvis operator
+val name = nullableString ?: "Guest"
+
+// Not-null assertion
+val length2 = nullableString!!.length // Throws exception if null</code></pre>
+            </div>
+        </section>
+
+        <section id="collections" class="content-section">
+            <h2>Collections</h2>
+            <p>Kotlin provides powerful collection types:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">// List
+val list = listOf(1, 2, 3)
+val mutableList = mutableListOf(1, 2, 3)
+
+// Set
+val set = setOf(1, 2, 3)
+val mutableSet = mutableSetOf(1, 2, 3)
+
+// Map
+val map = mapOf("key" to "value")
+val mutableMap = mutableMapOf("key" to "value")
+
+// Collection operations
+val numbers = listOf(1, 2, 3, 4, 5)
+val doubled = numbers.map { it * 2 }
+val evenNumbers = numbers.filter { it % 2 == 0 }</code></pre>
+            </div>
+        </section>
+
+        <section id="coroutines" class="content-section">
+            <h2>Coroutines</h2>
+            <p>Kotlin coroutines for asynchronous programming:</p>
+            <div class="code-example">
+                <pre><code class="language-kotlin">import kotlinx.coroutines.*
+
+// Basic coroutine
+fun main() = runBlocking {
+    launch {
+        delay(1000)
+        println("World!")
+    }
+    println("Hello")
+}
+
+// Async/await
+suspend fun fetchData(): String {
+    delay(1000)
+    return "Data"
+}
+
+// Coroutine scope
+class MyViewModel {
+    private val viewModelScope = CoroutineScope(Dispatchers.Main)
+    
+    fun loadData() {
+        viewModelScope.launch {
+            val result = async { fetchData() }.await()
+            // Handle result
+        }
+    }
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created with ❤️ by Aria Danesh</p>
+        <p>© 2024 LearnKotlin. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
