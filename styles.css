@@ -611,7 +611,14 @@ footer::before {
     opacity: 1;
     transform: translateX(5px);
 }
-
+.footer-link{
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.footer-link:hover {
+    color: var(--accent-hover);
+}
 .copy-button {
     background-color: var(--accent-color);
     color: white;
